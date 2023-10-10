@@ -19,21 +19,27 @@ class CadastroDeLivros {
         // livro.autor.nome = "Guilherme Silveira";
         // System.out.println(autor.nome);
 
-        Autor outroautor = new Autor();
-        outroautor.nome = "Ivan Meirelles";
-        outroautor.email = "ivanmeirellesgmail.com";
-        outroautor.cpf = "789.456.123.30";
+        /*
+         * Autor outroautor = new Autor();
+         * outroautor.nome = "Ivan Meirelles";
+         * outroautor.email = "ivanmeirellesgmail.com";
+         * outroautor.cpf = "789.456.123.30";
+         * 
+         * Livro outrolivro = new Livro();
+         * outrolivro.nome = "Lógica de Programação";
+         * outrolivro.descricao = "Crie seus primeiros programas";
+         * outrolivro.valor = 89.90;
+         * outrolivro.isbn = "978-85-66255-33-0";
+         * outrolivro.autor = outroautor;
+         * 
+         * outrolivro.MostrarDetalhes();
+         * outroautor.MostrarDetalhes();
+         */
 
-        Livro outrolivro = new Livro();
-        outrolivro.nome = "Lógica de Programação";
-        outrolivro.descricao = "Crie seus primeiros programas";
-        outrolivro.valor = 89.90;
-        outrolivro.isbn = "978-85-66255-33-0";
-        outrolivro.autor = outroautor;
-
-        livro.aplicaDescontoDe(0.1);
-        outrolivro.aplicaDescontoDe(0.1);
-
-
+        if (!livro.aplicaDescontoDe(0.3)) {
+            System.out.println("Desconto não pode ser maior do que 30%");
+        } else {
+            System.out.println("Valor com desconto: " + livro.valor);
+        }
     }
 }
