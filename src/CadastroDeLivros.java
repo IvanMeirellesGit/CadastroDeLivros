@@ -3,19 +3,20 @@ class CadastroDeLivros {
     public static void main(String[] args) {
 
         Autor autor = new Autor();
-        autor.nome = "Rodrigo Turini";
-        autor.email = "rodrigo.turini@gmail.com";
-        autor.cpf = "123.456.789.10";
+        autor.setNome("Rodrigo Turini");
+        autor.setEmail("rodrigo.turini@gmail.com");
+        autor.setCpf("123.456.789.10");
 
         Livro livro = new Livro();
-        livro.nome = "Java 8 Prático";
-        livro.descricao = "Novos recursos da linguagem";
-        livro.valor = 59.90;
-        livro.isbn = "978-85-66250-46-6";
-        livro.autor = autor;
+        livro.setNome("Java 8 Prático");
+        livro.setDescricao("Novos recursos da linguagem");
+        livro.setValor(59.90);
+        livro.setIsbn("978-85-66250-46-6");
+        livro.setAutor(autor);
 
         livro.MostrarDetalhes();
         autor.MostrarDetalhes();
+
         // livro.autor.nome = "Guilherme Silveira";
         // System.out.println(autor.nome);
 
@@ -39,7 +40,8 @@ class CadastroDeLivros {
         if (!livro.aplicaDescontoDe(0.3)) {
             System.out.println("Desconto não pode ser maior do que 30%");
         } else {
-            System.out.println("Valor com desconto: " + livro.valor);
+            System.out.println("Valor com desconto: " + livro.getValor());
         }
+
     }
 }

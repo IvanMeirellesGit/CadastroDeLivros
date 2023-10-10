@@ -1,25 +1,67 @@
 public class Livro {
 
-    String nome;
-    String descricao;
-    double valor;
-    String isbn;
-    Autor autor;
+    private String nome;
+    private String descricao;
+    private double valor;
+    private String isbn;
+    private Autor autor;
 
     public Livro() {
         System.out.println("Novo livro criado!");
+    } // Construtor da classe Livro
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    void MostrarDetalhes() {
+    public String getNome() {
+        return nome;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public Autor getAutor() {
+        return autor;
+    }
+
+    public void setAutor(Autor autor) {
+        this.autor = autor;
+    }
+
+    public void MostrarDetalhes() {
+        System.out.println("--");
         String mensagemLivro = "Mostrando detalhes do livro ";
         System.out.println(mensagemLivro);
-        System.out.println("Nome: " + nome);
-        System.out.println("Descrição: " + descricao);
-        System.out.println("Valor: " + valor);
-        System.out.println("Isbn: " + isbn);
+        System.out.println("--");
+        System.out.println("Nome: " + getNome());
+        System.out.println("Descrição: " + getDescricao());
+        System.out.println("Valor: " + getValor());
+        System.out.println("Isbn: " + getIsbn());
 
         if (this.temAutor()) {
-            autor.MostrarDetalhes();
+            getAutor().MostrarDetalhes();
         }
         System.out.println("--");
     }
@@ -28,11 +70,11 @@ public class Livro {
         if (porcentagem > 0.3) {
             return false;
         }
-        this.valor -= this.valor * porcentagem;
+        this.valor -= getValor() * porcentagem;
         return true;
     }
 
     public boolean temAutor() {
-        return this.autor != null;
+        return this.getAutor() != null;
     }
 }
