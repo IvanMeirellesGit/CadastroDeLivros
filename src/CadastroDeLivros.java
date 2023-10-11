@@ -7,35 +7,27 @@ class CadastroDeLivros {
         autor.setEmail("rodrigo.turini@gmail.com");
         autor.setCpf("123.456.789.10");
 
-        Livro livro = new Livro();
+        Livro livro = new Livro(autor);
         livro.setNome("Java 8 Prático");
         livro.setDescricao("Novos recursos da linguagem");
         livro.setValor(59.90);
         livro.setIsbn("978-85-66250-46-6");
-        livro.setAutor(autor);
 
         livro.MostrarDetalhes();
-        autor.MostrarDetalhes();
 
-        // livro.autor.nome = "Guilherme Silveira";
-        // System.out.println(autor.nome);
+        Autor outroautor = new Autor();
+        outroautor.setNome("Ivan Meirelles");
+        outroautor.setEmail("ivanmeirellesgmail.com");
+        outroautor.setCpf("789.456.123.30");
 
-        /*
-         * Autor outroautor = new Autor();
-         * outroautor.nome = "Ivan Meirelles";
-         * outroautor.email = "ivanmeirellesgmail.com";
-         * outroautor.cpf = "789.456.123.30";
-         * 
-         * Livro outrolivro = new Livro();
-         * outrolivro.nome = "Lógica de Programação";
-         * outrolivro.descricao = "Crie seus primeiros programas";
-         * outrolivro.valor = 89.90;
-         * outrolivro.isbn = "978-85-66255-33-0";
-         * outrolivro.autor = outroautor;
-         * 
-         * outrolivro.MostrarDetalhes();
-         * outroautor.MostrarDetalhes();
-         */
+        Livro outrolivro = new Livro(outroautor);
+        outrolivro.setNome("Lógica de Programação");
+        outrolivro.setDescricao("Crie seus primeiros programas");
+        outrolivro.setValor(89.90);
+        //outrolivro.setIsbn("978-85-66255-33-0");
+        outrolivro.setAutor(outroautor);
+
+        outrolivro.MostrarDetalhes();
 
         if (!livro.aplicaDescontoDe(0.3)) {
             System.out.println("Desconto não pode ser maior do que 30%");

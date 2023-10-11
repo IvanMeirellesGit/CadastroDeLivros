@@ -6,9 +6,15 @@ public class Livro {
     private String isbn;
     private Autor autor;
 
-    public Livro() {
+    public Livro(Autor autor) {
+        this();
         System.out.println("Novo livro criado!");
-    } // Construtor da classe Livro
+        this.autor = autor;
+    } // Construtor da classe Livro recebendo autor como parametro
+
+    public Livro() {
+        this.isbn = "000-00-00000-00-0";
+    }// Construtor vazio
 
     public void setNome(String nome) {
         this.nome = nome;
