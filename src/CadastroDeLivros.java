@@ -27,7 +27,6 @@ class CadastroDeLivros {
         //outrolivro.setIsbn("978-85-66255-33-0");
         outrolivro.setAutor(outroautor);
 
-<<<<<<< Updated upstream
         outrolivro.MostrarDetalhes();
 
         if (!livro.aplicaDescontoDe(0.3)) {
@@ -36,9 +35,7 @@ class CadastroDeLivros {
             System.out.println("Valor com desconto: " + livro.getValor());
         }
 
-=======
         livro.aplicaDescontoDe(0.1);
         outrolivro.aplicaDescontoDe(0.1);
->>>>>>> Stashed changes
     }
 }
